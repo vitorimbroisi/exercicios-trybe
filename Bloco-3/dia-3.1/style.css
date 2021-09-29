@@ -1,9 +1,11 @@
 h1 {
   font-family: sans-serif;
+  text-align: center;
 }
 
 p {
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+
 }
 
 body {
@@ -20,4 +22,34 @@ body {
 
 #lider {
   font-size: 40px;
+}
+
+.img {
+  border: solid black 1px;
+  margin-right: 400px;
+  position: absolute;
+  z-index: 1;
+  padding: 10px;
+  background-color: red;
+}
+
+
+.paragraph {
+  position: absolute;
+  z-index: 2;
+  border: solid black 1px;
+  left: 350px;
+  top: 200px;
+  padding: 5px;
+}
+
+#global {
+  position: absolute;
+  z-index: 3;
+  top: 500px;
+}
+
+.impar {
+  color: blue;
+  font-family: monospace;
 }
