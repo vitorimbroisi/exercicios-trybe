@@ -1,0 +1,48 @@
+/* h1, p {
+  text-align: center;
+}
+
+ol li:hover {
+  background-color: yellow;
+}
+
+ol li:active {
+  font-family: Arial, Helvetica, sans-serif;
+  color: red;
+}
+
+ol, ul {
+  list-style: none;
+} */
+
+div:hover {
+  border: solid black 1px;
+}
+
+#div-1 {
+  background-color: red;
+}
+#div-2{
+background-color: rosybrown;
+}
+
+#div-3{
+background-color: salmon;
+height: 100px;
+text-align: center;
+}
+
+#div-4 {
+background-color: seagreen;
+
+}
+
+#div-5 {
+background-color: springgreen;
+}
+
+h3 {
+  color: white;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-style: italic;
+}
