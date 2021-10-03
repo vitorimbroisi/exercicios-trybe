@@ -72,5 +72,3 @@ let names = ['José', 'Lucas', 'Nádia', 'Fernanda', 'Cairo', 'Joana'];
 //   sum = sum + index
 // }
 // console.log(sum);
-
-
