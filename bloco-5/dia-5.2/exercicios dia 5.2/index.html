@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Exercício 5.2</title>
+    <style>
+      section {
+        border-color: black;
+        border-style: solid;
+      }
+
+      .title {
+        text-align: center;
+      }
+
+      .main-content {
+        background-color: yellow;
+      }
+
+      .main-content .center-content {
+        background-color: red;
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .main-content .center-content p {
+        font-style: italic;
+      }
+
+      .main-content .left-content {
+        background-color: green;
+        width: 60%;
+        margin-left: 0;
+        margin-right: auto;
+      }
+
+      .main-content .left-content .small-image {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 100%;
+      }
+
+      .main-content .right-content {
+        background-color: blue;
+        width: 60%;
+        margin-left: auto;
+        margin-right: 0;
+      }
+
+      .main-content .description {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      const body = document.getElementsByTagName('body')[0];
+      const createH1 = document.createElement('h1');
+      createH1.innerText = 'Exercício 5.2 - JavaScript DOM'
+      createH1.className = 'title'
+      body.appendChild(createH1)
+
+      const createMain = document.createElement('main');
+      createMain.className = 'main-content'
+      body.appendChild(createMain);
+
+      const createSection = document.createElement('section');
+      createSection.className = 'center-content'
+      createMain.appendChild(createSection)
+      createSection.parentNode.style.backgroundColor = 'green';
+
+      const createParagraph = document.createElement('p');
+      createSection.appendChild(createParagraph);
+      createParagraph.innerText = 'vamos estudar pesado!'
+
+      const createLeftSection = document.createElement('section');
+      createLeftSection.className = 'left-content'
+      createMain.appendChild(createLeftSection);
+
+      const createRightSection = document.createElement('section');
+      createRightSection.className = 'right-content'
+      createRightSection.style.marginRight = 'auto';
+      createMain.appendChild(createRightSection)
+
+      const createSrc = document.createElement('img');
+      createSrc.className = 'small-image'
+      createSrc.src = 'https://picsum.photos/200'
+      createLeftSection.appendChild(createSrc)
+
+      const createList = document.createElement('ul');
+
+      for (let index = 1; index <= 10; index++) {
+        let createLi = document.createElement('li');
+        createLi.innerHTML = index;
+        createList.appendChild(createLi);
+      }
+      createRightSection.appendChild(createList);
+      createList.lastChild.remove();
+      createList.lastChild.remove();
+
+      for (let index = 0; index <= 2; index++) {
+        const createH3 = document.createElement('h3');
+        createH3.className = 'description'
+        createMain.appendChild(createH3)
+      }
+
+      createMain.removeChild(createLeftSection);
+
+    </script>
+  </body>
+</html>
