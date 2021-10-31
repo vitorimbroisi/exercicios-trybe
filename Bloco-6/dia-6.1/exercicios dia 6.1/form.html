@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>form training</title>
+</head>
+<body>
+  <h1>exercicio form</h1>
+  <fieldset>
+    <label for="name">Nome:
+      <input type="text" id="name" required maxlength="40">
+    </label>
+    <br><br>
+    <label for="email">e-mail
+      <input type="text" id="email" required maxlength="50">
+    </label>
+    <br><br>
+    <label for="cpf">CPF:
+      <input type="text" id="cpf" maxlength="11" placeholder="apenas números">
+    </label>
+    <br><br>
+    <label for="endereco">Endereço
+      <input type="text" id="endereco" maxlength="200" required>
+    </label>
+    <br><br>
+    <label for="city">Cidade:
+      <input type="text" id="city" required maxlength="28">
+    </label>
+    <br><br>
+    <label for="estado">Estado:
+      <select id="estado">
+      </select>
+      <br><br>
+      <p>tipo de domicilio</p>
+      <label for="tipoDeCasa">
+        <input type= "radio" name="radioHouse" id="tipoDeCasa" required>Casa
+      </label>
+      <label for="tipoDeCasa2">
+        <input type= "radio" name="radioHouse" id="tipoDeCasa2" required>Apartamento
+      </label>
+    </label>
+  </fieldset>
+  <script src="form.js"></script>
+</body>
+</html>
