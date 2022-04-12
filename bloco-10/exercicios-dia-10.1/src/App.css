@@ -37,10 +37,7 @@
   }
 }
 
-.content {
-  border: solid;
-}
-
-.teste {
-  border: solid;
+.conteudo {
+  /* margin-bottom: 10px; */
+  padding: 20px;
 }

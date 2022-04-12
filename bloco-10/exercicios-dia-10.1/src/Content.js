@@ -1,5 +1,6 @@
 import React from "react";
 
+
 const conteudos = [
   {
     conteudo: 'High Order Functions',
@@ -26,16 +27,14 @@ const conteudos = [
 class Content extends React.Component {
   render() {
     return (
-      <div className="content">
-        { conteudos.map((element) => (
-          <div key={element.conteudo} className='teste'>
-        <p> { `O conteúdo é ${element.conteudo} ` } </p>
-        <p> { `Status: ${element.bloco}` } </p>
-        <p> { `Bloco: ${element.status}` } </p>
-          </div>
-        ) ) }  
-      </div>
-
+        <div>{ conteudos.map(value => 
+          <div className="conteudo">
+            <p>{`O conteúdo é: ${value.conteudo}`}</p>
+            <p>{`Status: ${value.status}`}</p>
+            <p>{`Bloco: ${value.bloco}`}</p>
+        </div>
+        )}
+        </div>
     )
   }
 }
