@@ -1,5 +1,6 @@
 import React from 'react';
 import ApplyPokemon from './ApplyPokemon';
+import PropTypes from 'prop-types'
 
 class RenderPokemon extends React.Component {
   render() {
@@ -10,6 +11,17 @@ class RenderPokemon extends React.Component {
       </div>
     );
   }
+}
+
+RenderPokemon.propTypes = {
+  dataPokemon: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.number,
+      name: PropTypes.string,
+      type: PropTypes.string,
+      averageWeight: PropTypes.object,
+    })
+  ).isRequired,
 }
 
 export default RenderPokemon;
