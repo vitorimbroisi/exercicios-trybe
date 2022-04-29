@@ -36,17 +36,3 @@
     transform: rotate(360deg);
   }
 }
-
-.RenderPokemon {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
-  height: 100%;
-}
-
-.ApplyPokemon {
-  border: black solid 1px;
-  width: 30%;
-  margin: 10px;
-  border-radius: 15px;
-}
