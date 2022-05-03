@@ -1,4 +1,6 @@
 import React from 'react';
+import Estado from './Estado';
+import TextArea from './TextArea';
 
 class Form extends React.Component{
   constructor() {
@@ -8,8 +10,14 @@ class Form extends React.Component{
       teste2: '',
       vaiComparecer: false,
       estado: '',
+      formularioComErros: false,
     }
   }
+
+  handleErros = () => {
+    
+  }
+
 // também pode ser escrito assim:
 // handleChange = ({target}) => {
 //   const { name, value} = target;
@@ -23,34 +31,15 @@ class Form extends React.Component{
     })
   }
 
-
-
   render() {
     return(
       <div className='mainDiv'>
         <h1>Formulário aula 11.2</h1>
         <form>
-          <label> Estado:
-            <select 
-            name="estado"
-            value={this.state.estado}
-            onChange={this.handleChange}
-            >
-              <option>RJ</option>
-              <option>SP</option>
-              <option>ES</option>
-              <option>MG</option>
-              <option>AC</option>
-              <option>RS</option>
-              <option>MT</option>
-            </select>
-          </label>
+          <Estado value={this.state.estado} handleChange={this.handleChange} />
           <br></br>
           <br></br>
-          <label>
-            label teste 1:
-            <textarea name='teste1' type='text' value={this.state.teste1} onChange={this.handleChange} />
-          </label>
+          <TextArea value={this.state.teste1} handleChange={this.handleChange}/>
           <br></br>
           <br></br>
           <label>
