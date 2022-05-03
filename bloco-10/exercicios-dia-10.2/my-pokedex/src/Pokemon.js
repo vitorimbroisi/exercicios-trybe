@@ -1,5 +1,6 @@
 import React from 'react';
 import Pokedex from './Pokedex';
+import PropTypes from 'prop-types'
 
 class Pokemon extends React.Component{
   render() {
@@ -14,6 +15,16 @@ class Pokemon extends React.Component{
       </div>
     );
   }
+}
+
+pokemon.PropTypes = {
+  image: PropTypes.string,
+  name: PropTypes.string,
+  type: PropTypes.string,
+  averageWeight: PropTypes.shape({
+    measurementUnit: PropTypes.string,
+    value: PropTypes.number,
+  })
 }
 
 export default Pokemon;
