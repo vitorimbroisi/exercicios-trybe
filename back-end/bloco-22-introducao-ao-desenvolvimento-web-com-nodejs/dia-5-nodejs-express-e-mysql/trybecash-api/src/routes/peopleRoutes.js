@@ -15,6 +15,7 @@ router.get('/', async (_req, res) => {
 router.get('/:id', async (req, res) => {
   try {
     const { id } = req.params;
+    console.log('to aqui aaaaaaaaaaaa', req.params, 'id', id);
     const [[result]] = await peopleDB.findById(id);
     if (result) {
       res.status(200).json(result);
@@ -30,6 +31,7 @@ router.get('/:id', async (req, res) => {
 
 router.post('/', async (req, res) => {
   const person = req.body;
+  // console.log('person',person, 'req.body',req.body, 'req.params', req.params);
   try {
     const [result] = await peopleDB.insert(person);
     res.status(201).json({
@@ -43,7 +45,10 @@ router.post('/', async (req, res) => {
 router.put('/:id', async (req, res) => {
   try {
     const { id } = req.params;
+    // console.log('id:', id, 'req.params:', req.params);
+  
     const person = req.body;
+    // console.log('person:', person, 'req.body:', req.body);
     const [result] = await peopleDB.update(person, id);
     if (result.affectedRows > 0) {
       res.status(200).json({ message: `Pessoa de id ${id} atualizada com sucesso` });
